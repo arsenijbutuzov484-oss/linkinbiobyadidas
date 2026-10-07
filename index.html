@@ -6,18 +6,16 @@
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
   a, button, [role="button"] { outline: none; -webkit-tap-highlight-color: transparent; user-select: none; }
   a:focus, button:focus, a:focus-visible, button:focus-visible { outline: none; }
-  html, body { height: 100%; }
-
-  body {
+    body {
     color: #f0f0f0;
     font-family: 'Inter', system-ui, sans-serif;
     min-height: 100%;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
-    padding: 24px 20px;
+    padding: 0;
     position: relative;
-    overflow: hidden;
+    overflow-x: hidden;
   }
 
   /* ── Фон: медленно вращающийся красно-чёрный градиент ── */
@@ -69,8 +67,9 @@
     position: relative;
     z-index: 1;
     width: 100%;
-    max-width: 360px;
-    border-radius: 20px;
+    max-width: 480px;
+    min-height: 100dvh;
+    border-radius: 0;
     overflow: hidden;
     background: rgba(8,0,0,0.75);
     backdrop-filter: blur(32px) saturate(160%);
