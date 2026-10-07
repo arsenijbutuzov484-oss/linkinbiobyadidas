@@ -6,14 +6,16 @@
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
   a, button, [role="button"] { outline: none; -webkit-tap-highlight-color: transparent; user-select: none; }
   a:focus, button:focus, a:focus-visible, button:focus-visible { outline: none; }
-    body {
+    html, body { height: 100%; }
+
+  body {
     color: #f0f0f0;
     font-family: 'Inter', system-ui, sans-serif;
-    min-height: 100dvh;
+    min-height: 100%;
     display: flex;
-    flex-direction: column;
-    padding: 0;
-    margin: 0;
+    align-items: center;
+    justify-content: center;
+    padding: 24px 16px;
     position: relative;
     overflow-x: hidden;
   }
@@ -67,11 +69,9 @@
     position: relative;
     z-index: 1;
     width: 100%;
-    max-width: 100%;
-    flex: 1;
-    border-radius: 0;
+    max-width: 360px;
+    border-radius: 20px;
     overflow: hidden;
-    padding-bottom: 40px;
     background: rgba(8,0,0,0.75);
     backdrop-filter: blur(32px) saturate(160%);
     -webkit-backdrop-filter: blur(32px) saturate(160%);
@@ -137,10 +137,6 @@
     align-items: center;
     padding: 0 20px 20px;
     margin-top: -38px;
-    max-width: 420px;
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
   }
 
   /* ── Аватар + Discord-style рамка ── */
@@ -275,12 +271,9 @@
   /* ── Кнопки ── */
   .links {
     width: 100%;
-    max-width: 420px;
-    margin: 0 auto;
     display: flex;
     flex-direction: column;
     gap: 0;
-    padding: 0 16px;
   }
 
   .link-sep {
