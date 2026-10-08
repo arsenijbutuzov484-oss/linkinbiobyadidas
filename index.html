@@ -11,11 +11,11 @@
   body {
     color: #f0f0f0;
     font-family: 'Inter', system-ui, sans-serif;
-    min-height: 100%;
+    min-height: 100vh;
     display: flex;
-    align-items: center;
+    align-items: stretch;
     justify-content: center;
-    padding: 20px 16px;
+    padding: 0;
     position: relative;
     overflow-x: hidden;
   }
@@ -70,17 +70,12 @@
     z-index: 1;
     width: 100%;
     max-width: 480px;
-    border-radius: 22px;
+    min-height: 100vh;
+    border-radius: 0;
     overflow: hidden;
     background: rgba(8,0,0,0.82);
     backdrop-filter: blur(32px) saturate(160%);
     -webkit-backdrop-filter: blur(32px) saturate(160%);
-    border: 1px solid rgba(255,255,255,0.08);
-    box-shadow:
-      0 0 0 1px rgba(255,60,60,0.06) inset,
-      0 28px 80px rgba(0,0,0,0.8),
-      0 0 60px rgba(160,0,0,0.18),
-      0 40px 120px -20px rgba(180,0,0,0.35);
   }
 
   /* Зернистость поверх карточки */
@@ -88,7 +83,7 @@
     content: '';
     position: absolute;
     inset: 0;
-    border-radius: 22px;
+    border-radius: 0;
     pointer-events: none;
     z-index: 99;
     opacity: 0.035;
