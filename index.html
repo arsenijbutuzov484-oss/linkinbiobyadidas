@@ -6,16 +6,16 @@
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
   a, button, [role="button"] { outline: none; -webkit-tap-highlight-color: transparent; user-select: none; }
   a:focus, button:focus, a:focus-visible, button:focus-visible { outline: none; }
-    html, body { height: 100%; }
+    html, body { height: 100%; margin: 0; padding: 0; }
 
   body {
     color: #f0f0f0;
     font-family: 'Inter', system-ui, sans-serif;
     min-height: 100%;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
-    padding: 12px 8px;
+    padding: 0;
     position: relative;
     overflow-x: hidden;
   }
@@ -68,9 +68,9 @@
   .card {
     position: relative;
     z-index: 1;
-    width: calc(100% - 16px);
+    width: 100%;
     max-width: 480px;
-    border-radius: 20px;
+    border-radius: 0;
     overflow: hidden;
     background: rgba(8,0,0,0.75);
     backdrop-filter: blur(32px) saturate(160%);
